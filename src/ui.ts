@@ -1,4 +1,4 @@
-import type { ExtensionContext, Theme } from "@mariozechner/pi-coding-agent";
+import type { ExtensionContext, Theme } from "@earendil-works/pi-coding-agent";
 import {
     CURSOR_MARKER,
     Editor,
@@ -7,7 +7,7 @@ import {
     visibleWidth,
     wrapTextWithAnsi,
     type Component,
-} from "@mariozechner/pi-tui";
+} from "@earendil-works/pi-tui";
 
 import {
     adjustStructuredDiffContext,
@@ -90,7 +90,7 @@ const INLINE_CURSOR_OPEN = "\x1b[1;7m";
 const INLINE_CURSOR_CLOSE = "\x1b[0m";
 function getThemeInstance(): any {
     try {
-        return (globalThis as any)[Symbol.for("@mariozechner/pi-coding-agent:theme")] ?? undefined;
+        return (globalThis as any)[Symbol.for("@earendil-works/pi-coding-agent:theme")] ?? undefined;
     } catch {}
     return undefined;
 }
